@@ -1,3 +1,4 @@
+DROP PROCEDURE IF EXISTS insert_person;
 create DEFINER=`root`@`%` PROCEDURE `insert_person`()
 begin
     declare c_id integer default 1;
@@ -8,7 +9,9 @@ begin
     end while;
 end
 
-select DATA_LENGTH, INDEX_LENGTH from information_schema.TABLES where TABLE_NAME='person';
+select DATA_LENGTH, INDEX_LENGTH,TABLE_ROWS from information_schema.TABLES where TABLE_SCHEMA="common_mistakes" AND
+    TABLE_NAME='person';
+
 
 explain select * from person where NAME='name1';
 
