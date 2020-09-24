@@ -6,10 +6,10 @@ public class CommonMistakesApplication {
 
     public static void main(String[] args) {
 
-        System.out.println("wrong");
-        wrong();
-        System.out.println("right1");
-        right1();
+//        System.out.println("wrong");
+//        wrong();
+//        System.out.println("right1");
+//        right1();
         System.out.println("right2");
         right2();
     }
